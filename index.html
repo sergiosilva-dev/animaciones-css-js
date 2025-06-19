@@ -16,16 +16,17 @@
     <main>
         <section class="botones">
             <h2>Botón con transición CSS</h2>
-            <button class="boton-transicion">Pasa el mouse</button>
+            <button class="boton-transicion" aria-label="Botón con transición animada">Pasa el mouse</button>
 
             <h2>Botón animado con click (JS)</h2>
-            <button id="boton-rebote">Haz clic</button>
+            <button id="boton-rebote" aria-label="Botón con rebote animado">Haz clic</button>
 
             <h2>Animación al pasar el mouse (mouseover con JS)</h2>
-            <div id="cuadro-hover-js">Pasa el mouse aquí</div>
+            <div id="cuadro-hover-js" tabindex="0">Pasa el mouse aquí</div>
 
             <h2>Animación al enfocar un campo (focus con JS)</h2>
-            <input type="text" id="input-focus" placeholder="Haz clic aquí..." />
+            <input type="text" id="input-focus" placeholder="Haz clic aquí..."
+                aria-label="Campo de entrada con animación al enfocar" />
         </section>
 
         <section class="tarjetas">
@@ -63,18 +64,18 @@
 
         <section class="zoom">
             <h2>Animación con efecto Zoom</h2>
-            <div id="cuadro-zoom">Zoom!</div>
+            <div id="cuadro-zoom" tabindex="0">Zoom!</div>
         </section>
 
         <section class="infinita">
             <h2>Animación infinita (rotación)</h2>
-            <div id="elemento-giratorio">🔄</div>
+            <div id="elemento-giratorio" tabindex="0" aria-label="Elemento girando continuamente">🔄</div>
         </section>
 
         <section class="raf">
             <h2>Animación con requestAnimationFrame</h2>
             <div class="contenedor-raf">
-                <div id="cuadro-raf"></div>
+                <div id="cuadro-raf" tabindex="0"></div>
             </div>
         </section>
     </main>
