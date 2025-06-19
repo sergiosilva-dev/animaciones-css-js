@@ -64,3 +64,23 @@ cuadroZoom.addEventListener("click", () => {
     cuadroZoom.classList.remove("zoom-in");
   }, 500); // duración igual a la animación
 });
+
+// Animación con requestAnimationFrame (cuadro que rebota)
+const cuadroRaf = document.getElementById("cuadro-raf");
+let posicion = 0;
+let direccion = 1;
+
+function animarCuadro() {
+  if (posicion >= window.innerWidth - 60) {
+    direccion = -1;
+  } else if (posicion <= 0) {
+    direccion = 1;
+  }
+
+  posicion += direccion * 2; // velocidad
+  cuadroRaf.style.left = `${posicion}px`;
+
+  requestAnimationFrame(animarCuadro);
+}
+
+requestAnimationFrame(animarCuadro);
