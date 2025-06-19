@@ -71,7 +71,8 @@ let posicion = 0;
 let direccion = 1;
 
 function animarCuadro() {
-  if (posicion >= window.innerWidth - 60) {
+  const anchoContenedor = document.querySelector(".raf").clientWidth;
+  if (posicion >= anchoContenedor - 60) {
     direccion = -1;
   } else if (posicion <= 0) {
     direccion = 1;

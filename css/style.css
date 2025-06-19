@@ -10,8 +10,10 @@ body {
 header {
   background-color: #333;
   color: white;
-  padding: 1rem;
+  padding: 1.5rem;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 main {
@@ -53,10 +55,24 @@ main {
   perspective: 1000px;
 }
 
-.tarjeta .cara {
+/* Nuevo contenedor interno para animación */
+.tarjeta-inner {
   width: 100%;
   height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+/* Rotación ocurre aquí al hacer hover en .tarjeta */
+.tarjeta:hover .tarjeta-inner {
+  transform: rotateY(180deg);
+}
+
+.cara {
   position: absolute;
+  width: 100%;
+  height: 100%;
   backface-visibility: hidden;
   border-radius: 12px;
   display: flex;
@@ -67,22 +83,12 @@ main {
   font-size: 1.2rem;
 }
 
-.tarjeta .cara-frontal {
+.cara-frontal {
   background-color: #008cff;
 }
 
-.tarjeta .cara-posterior {
+.cara-posterior {
   background-color: #003f7f;
-  transform: rotateY(180deg);
-}
-
-.tarjeta {
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.6s ease;
-}
-
-.tarjeta:hover {
   transform: rotateY(180deg);
 }
 
@@ -276,11 +282,16 @@ main {
 }
 
 /* Footer animado */
-.footer-animado {
+footer {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
   background-color: #2d3436;
   color: white;
   text-align: center;
-  padding: 1.5rem;
+}
+
+.footer-animado {
   opacity: 0;
   animation: subirFooter 1s ease-out 1s forwards;
 }
@@ -300,8 +311,15 @@ main {
 .raf {
   margin-top: 3rem;
   text-align: center;
+}
+
+.contenedor-raf {
   position: relative;
-  height: 120px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100px;
+  overflow: hidden;
 }
 
 #cuadro-raf {
@@ -310,6 +328,61 @@ main {
   background-color: #e17055;
   border-radius: 8px;
   position: absolute;
-  top: 40px;
+  top: 25px;
   left: 0;
+}
+
+/* Adaptación responsive base */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+main,
+section {
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor-tarjetas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reveal-caja {
+    width: 95%;
+    font-size: 1rem;
+  }
+
+  #cuadro-hover-js,
+  #cuadro-zoom,
+  #input-focus,
+  #boton-rebote,
+  .boton-transicion {
+    width: 90%;
+    max-width: 300px;
+    font-size: 1rem;
+  }
+
+  #elemento-giratorio {
+    margin: 1.5rem auto;
+    font-size: 2.5rem;
+  }
+
+  #cuadro-raf {
+    width: 40px;
+    height: 40px;
+  }
+
+  h1,
+  h2 {
+    font-size: 1.5rem;
+  }
 }
