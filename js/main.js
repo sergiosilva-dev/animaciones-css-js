@@ -42,3 +42,15 @@ cuadroHover.addEventListener("mouseover", () => {
     cuadroHover.classList.remove("animacion-hover");
   }, 500); // misma duración que la animación
 });
+
+// Animación con focus (JS)
+const inputFocus = document.getElementById("input-focus");
+
+inputFocus.addEventListener("focus", () => {
+  inputFocus.classList.add("animacion-focus");
+
+  // Remover animación tras ejecución
+  setTimeout(() => {
+    inputFocus.classList.remove("animacion-focus");
+  }, 600);
+});
