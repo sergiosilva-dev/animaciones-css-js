@@ -30,3 +30,15 @@ botonRebote.addEventListener("click", () => {
     botonRebote.classList.remove("rebotar");
   }, 600); // misma duración que la animación
 });
+
+// Animación con mouseover (JS)
+const cuadroHover = document.getElementById("cuadro-hover-js");
+
+cuadroHover.addEventListener("mouseover", () => {
+  cuadroHover.classList.add("animacion-hover");
+
+  // Eliminar la clase para poder volver a animar
+  setTimeout(() => {
+    cuadroHover.classList.remove("animacion-hover");
+  }, 500); // misma duración que la animación
+});
