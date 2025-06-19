@@ -54,3 +54,13 @@ inputFocus.addEventListener("focus", () => {
     inputFocus.classList.remove("animacion-focus");
   }, 600);
 });
+
+// Animación con zoom al hacer clic
+const cuadroZoom = document.getElementById("cuadro-zoom");
+
+cuadroZoom.addEventListener("click", () => {
+  cuadroZoom.classList.add("zoom-in");
+  setTimeout(() => {
+    cuadroZoom.classList.remove("zoom-in");
+  }, 500); // duración igual a la animación
+});
