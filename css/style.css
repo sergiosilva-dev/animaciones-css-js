@@ -251,3 +251,22 @@ main {
     transform: scale(1);
   }
 }
+
+/* Animación infinita */
+#elemento-giratorio {
+  font-size: 3rem;
+  width: 80px;
+  height: 80px;
+  background-color: #fdcb6e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  border-radius: 50%;
+  animation: girar 2s linear infinite;
+}
+
+@keyframes girar {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
