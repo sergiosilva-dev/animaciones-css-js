@@ -124,3 +124,38 @@ main {
     opacity: 1;
   }
 }
+
+/* Botón de rebote */
+#boton-rebote {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background-color: #00b894;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Clase animada */
+.rebotar {
+  animation: rebote 0.6s ease;
+}
+
+@keyframes rebote {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
