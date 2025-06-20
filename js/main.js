@@ -1,3 +1,9 @@
+/*
+Autor: Sergio Silva
+Fecha: 2025-06-19
+Descripción: Script JS para controlar animaciones disparadas por eventos (click, focus, mouseover) y animaciones avanzadas con requestAnimationFrame.
+*/
+
 // Archivo conectado correctamente
 console.log("Proyecto Animaciones CSS + JS cargado");
 
