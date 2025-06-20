@@ -1,0 +1,21 @@
+{
+  "name": "Animaciones CSS + JS | Sergio Silva",
+  "short_name": "AnimacionesCSSJS",
+  "description": "Proyecto de animaciones web con CSS y JS por Sergio Silva.",
+  "start_url": "/animaciones-css-js/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#008cff",
+  "icons": [
+    {
+      "src": "assets/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sergiosilva-dev.github.io/animaciones-css-js/sitemap.xml
